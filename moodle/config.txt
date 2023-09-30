@@ -1,0 +1,72 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Znajdź element <nav> po jego tagu
+    var navElement = document.querySelector("nav");
+
+    // Sprawdź, czy znaleziono element <nav>
+    if (navElement) {
+        // Jeśli znaleziono, usuń go
+        navElement.remove();
+        console.log("Element <nav> został usunięty.");
+    } else {
+        // Jeśli nie znaleziono, wyświetl komunikat w konsoli
+        console.log("Element <nav> nie został znaleziony.");
+    }
+});// Tworzymy nawigacyjny pasek
+const navBar = document.createElement('nav');
+navBar.style.position = 'fixed';
+navBar.style.top = '0';
+navBar.style.left = '0';
+navBar.style.zIndex = '10';
+navBar.style.height = '60px';
+navBar.style.width = '100%';
+navBar.style.borderBottom = '2px solid #ccc';
+navBar.style.backgroundColor = '#87CEEB';
+navBar.style.display = 'flex';
+navBar.style.justifyContent = 'space-between';
+navBar.style.alignItems = 'center';
+navBar.style.padding = '0 20px';
+
+// Tworzymy tytuł
+const title = document.createElement('div');
+title.style.fontSize = '24px';
+title.style.fontWeight = 'bold';
+title.style.color = '#333';
+title.innerText = 'Kołobrzeg';
+
+// Tworzymy listę nawigacyjną
+const navLinks = document.createElement('ul');
+navLinks.style.listStyle = 'none';
+navLinks.style.display = 'flex';
+navLinks.style.gap = '20px';
+
+// Dodajemy elementy nawigacyjne
+const linksData = [
+  { text: 'Home', href: 'https://hack-yeah23.vercel.app/' },
+  { text: 'O nas', href: 'https://hack-yeah23.vercel.app/o-nas' },
+  { text: 'Kontakt', href: 'https://hack-yeah23.vercel.app/kontakt' },
+  { text: 'Moodle', href: 'http://192.166.217.253' },
+  { text: 'Forum', href: 'https://hack-yeah23.vercel.app/forum' }
+];
+
+linksData.forEach(link => {
+  const listItem = document.createElement('li');
+  const anchor = document.createElement('a');
+  anchor.style.fontSize = '18px';
+  anchor.style.textDecoration = 'none';
+  anchor.style.color = '#333';
+  anchor.innerText = link.text;
+  anchor.href = link.href;
+  listItem.appendChild(anchor);
+  navLinks.appendChild(listItem);
+});
+
+// Dodajemy elementy do nawigacyjnego paska
+navBar.appendChild(title);
+navBar.appendChild(navLinks);
+
+// Dodajemy nawigacyjny pasek do body
+document.body.appendChild(navBar);
+
+
+</script>

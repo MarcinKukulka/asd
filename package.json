@@ -10,6 +10,8 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
+		"@fortawesome/free-brands-svg-icons": "^6.4.2",
+		"@fortawesome/react-fontawesome": "^0.2.0",
 		"@hookform/resolvers": "^3.3.1",
 		"@mdx-js/loader": "^2.3.0",
 		"@mdx-js/react": "^2.3.0",
