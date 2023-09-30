@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 const poppins = Poppins({ subsets: ["latin", "latin-ext"], weight: "400" });
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body className={poppins.className}>
 				<Navbar />
 				<div className="overflow-hidden pt-24">{children}</div>
+				<Footer />
 			</body>
 		</html>
 	);
