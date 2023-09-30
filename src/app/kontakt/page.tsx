@@ -20,7 +20,7 @@ export default function Contact() {
 	};
 
 	return (
-		<>
+		<div className="">
 			<div className="my-8 grid justify-center text-center">
 				<h1 className="mb-2 text-3xl font-bold">Masz Pytanie?</h1>
 				<h1 className="text-xl font-semibold">Skontaktuj się z Urzędem Miasta</h1>
@@ -85,14 +85,15 @@ export default function Contact() {
 					</form>
 
 					<iframe
+						className={"block"}
 						title="Mapa Google"
 						width="100%"
-						height="200"
+						height="250px"
 						src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2335.18699155631!2d15.573750777037388!3d54.17676411226628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1332915aaa9ddba6!2sUrz%C4%85d%20Miasta%20Ko%C5%82obrzeg!5e0!3m2!1spl!2spl!4v1696093032229!5m2!1spl!2spl`}
 						allowFullScreen
 					></iframe>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }
