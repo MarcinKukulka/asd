@@ -74,3 +74,31 @@
     @apply bg-background text-foreground;
   }
 }
+
+.slide-up {
+  animation: slidesUp 8s infinite;
+  will-change: transofrm;
+  animation-delay: 3s
+}
+
+@keyframes slidesUp {
+  0% {
+      transform: translateY(0)
+  }
+
+  20% {
+      transform: translateY(-100%)
+  }
+
+  40% {
+      transform: translateY(-200%)
+  }
+
+  60% {
+      transform: translateY(-300%)
+  }
+
+  to {
+      transform: translateY(0)
+  }
+}

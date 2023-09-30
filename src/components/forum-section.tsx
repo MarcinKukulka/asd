@@ -51,7 +51,7 @@ export const ForumSection = () => {
 					<h2 className="self-center text-4xl font-bold">
 						Znajdź pomoc na naszym dedykowanym forum
 					</h2>
-					<div className="mx-auto grid grid-cols-3 gap-8">
+					<div className="mx-auto grid md:grid-cols-3 grid-cols-2 gap-8">
 						{FORUM_CARDS.map(({ title, description, iconAlt, icon }) => (
 							<ForumCard
 								title={title}
