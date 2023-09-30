@@ -24,8 +24,8 @@ export const Navbar = () => {
 		{ title: "Home", path: "/" },
 		{ title: "O nas", path: "/o-nas" },
 		{ title: "Kontakt", path: "/kontakt" },
-		{ title: "Moodle", path: "http://192.166.217.253" },
-		{ title: "Forum", path: "/forum" },
+		{ title: "Kursy", path: "http://192.166.217.253" },
+		{ title: "Forum", path: "/http://192.166.217.253:8000" },
 	];
 
 	return (
