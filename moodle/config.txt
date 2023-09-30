@@ -42,11 +42,11 @@ navLinks.style.gap = '20px';
 
 // Dodajemy elementy nawigacyjne
 const linksData = [
-  { text: 'Home', href: '/' },
-  { text: 'O nas', href: '/o-nas' },
-  { text: 'Kontakt', href: '/kontakt' },
+  { text: 'Home', href: 'https://hack-yeah23.vercel.app/' },
+  { text: 'O nas', href: 'https://hack-yeah23.vercel.app/o-nas' },
+  { text: 'Kontakt', href: 'https://hack-yeah23.vercel.app/kontakt' },
   { text: 'Moodle', href: 'http://192.166.217.253' },
-  { text: 'Forum', href: '/forum' }
+  { text: 'Forum', href: 'https://hack-yeah23.vercel.app/forum' }
 ];
 
 linksData.forEach(link => {
