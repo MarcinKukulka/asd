@@ -6,7 +6,7 @@ import { Menu } from "lucide-react";
 export const Navbar = () => {
 	const [navState, setNavState] = useState(false);
 	const navbarRef = useRef<HTMLDivElement>(null);
-	
+
 	useEffect(() => {
 		function handleClickOutside(event: Event) {
 			if (navbarRef.current && !navbarRef.current.contains(event.target as HTMLDivElement)) {
@@ -22,7 +22,7 @@ export const Navbar = () => {
 
 	const navbarPaths = [
 		{ title: "Home", path: "/" },
-		{ title: "O nas", path: "/o-nas" },
+		{ title: "Kuźnia talentów", path: "/kuznia-talentow" },
 		{ title: "Kontakt", path: "/kontakt" },
 		{ title: "Kursy", path: "http://192.166.217.253" },
 		{ title: "Forum", path: "http://192.166.217.253:8000" },
@@ -37,7 +37,7 @@ export const Navbar = () => {
 					</Link>
 					<div className="md:hidden">
 						<button
-							className="rounded-md p-2 text-gray-700 outline-none focus:border focus:border-slate-700"
+							className="mr-4 rounded-md p-2 text-gray-700 outline-none focus:border focus:border-slate-700"
 							onClick={() => setNavState(!navState)}
 						>
 							<Menu />
