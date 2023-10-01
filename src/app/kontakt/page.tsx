@@ -1,5 +1,6 @@
 "use client";
 import React, { type ChangeEvent, useState } from "react";
+import { Button } from "@/ui/button";
 
 export default function Contact() {
 	const [formData, setFormData] = useState({
@@ -76,12 +77,12 @@ export default function Contact() {
 								</label>
 							</div>
 						</div>
-						<button
+						<Button
 							type="submit"
-							className="mx-auto mt-4 min-w-[15ch] rounded-full bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
+							className="hover:primary/90 mx-auto mt-4 min-w-[15ch] rounded-md bg-sky-700 px-4 py-2 text-white"
 						>
 							Wyślij
-						</button>
+						</Button>
 					</form>
 
 					<iframe

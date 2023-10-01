@@ -11,7 +11,7 @@ export const Footer = () => {
 						<Icon name={"instagram"} />
 					</div>
 				</Link>
-				<Link href="https://facebook.com/kolobrzeg" target="_blank">
+				<Link href="https://facebook.com/hackyeah" target="_blank">
 					<div className="mr-4 rounded-full bg-sky-500 p-2">
 						<Icon name={"facebook"} />
 					</div>

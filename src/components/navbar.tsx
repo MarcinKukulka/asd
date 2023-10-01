@@ -37,7 +37,7 @@ export const Navbar = () => {
 					</Link>
 					<div className="md:hidden">
 						<button
-							className="rounded-md p-2 text-gray-700 outline-none focus:border focus:border-slate-700"
+							className="mr-4 rounded-md p-2 text-gray-700 outline-none focus:border focus:border-slate-700"
 							onClick={() => setNavState(!navState)}
 						>
 							<Menu />
