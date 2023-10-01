@@ -111,6 +111,7 @@ const Talents: React.FC = () => {
 							Aplikuj
 						</Button>
 					</div>
+					<div className={"min-h-[40vh]"}></div>
 				</div>
 			)}
 
