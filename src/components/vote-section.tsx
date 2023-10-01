@@ -67,13 +67,19 @@ export const VoteSection = () => {
 				Zagłosuj na projekt, który może dać Ci szansę
 			</h2>
 			<p className="mb-10 mt-4 text-center">
-				By information about design the world to the best instructors, heatc helping By information
+				Głosuj na przyszłość! Wybierz najbardziej innowacyjne i wartościowe projekty, które
+				kształtują jutro. Twój głos ma moc zmiany!
 			</p>
 			{!isButtonClicked ? (
 				<form className="flex flex-col items-center" onSubmit={handleVoting}>
 					<div className="gird-cols-1 grid gap-6 md:grid-cols-2">
 						{PROJECTS.map(({ id, title, description }) => (
-							<VoteInput key={id} title={title} onChange={handleInputChange} description={description} />
+							<VoteInput
+								key={id}
+								title={title}
+								onChange={handleInputChange}
+								description={description}
+							/>
 						))}
 					</div>
 
