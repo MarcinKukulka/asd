@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { type ChangeEvent, useEffect, useState } from "react";
 import { Button } from "@/ui/button";
 
 const ideas = [
@@ -59,15 +59,26 @@ const ideas = [
 	},
 ];
 const Talents: React.FC = () => {
+	const [formData1, setFormData1] = useState({
+		imie: "",
+		nazwisko: "",
+		pytanie: "",
+		email: "",
+	});
+
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const { name, value } = e.target;
+		setFormData1({ ...formData1, [name]: value });
+	};
+
+	const handleInputChange2 = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+		const { name, value } = e.target;
+		setFormData1({ ...formData1, [name]: value });
+	};
 	const [selectedTile, setSelectedTile] = useState<number | null>(null);
 
 	const handleClick = (index: number) => {
 		setSelectedTile(selectedTile === index ? null : index);
-	};
-
-	const handleApplyClick = () => {
-		// Tutaj możesz dodać logikę dla przycisku "Aplikuj"
-		console.log("Aplikuj kliknięty!");
 	};
 
 	useEffect(() => {
@@ -104,14 +115,70 @@ const Talents: React.FC = () => {
 							{ideas[selectedTile].category}
 						</p>
 						<p className="mb-4 text-base text-gray-600">{ideas[selectedTile].description}</p>
-						<Button
-							className="hover:primary/90 self-center rounded bg-sky-700 px-4 py-2 text-white"
-							onClick={handleApplyClick}
-						>
-							Aplikuj
-						</Button>
 					</div>
-					<div className={"min-h-[40vh]"}></div>
+					<h2 className="flex flex-col items-center pt-10 text-3xl font-bold">
+						Dodaj swoj pomysł!
+					</h2>
+					<div className="flex flex-col p-5">
+						<div className="flex flex-grow flex-col items-center justify-between">
+							<form className="mx-2 grid justify-center rounded-md bg-white p-1 pb-10 md:mx-0 md:max-w-md lg:max-w-lg xl:max-w-xl">
+								<div className="grid grid-rows-1 gap-4 md:grid-cols-3">
+									<label className="block text-sm font-medium text-gray-700">
+										Imię:
+										<input
+											className="mt-1 w-full rounded border border-sky-500 p-2"
+											type="text"
+											name="imie"
+											value={formData1.imie}
+											onChange={handleInputChange}
+											required
+										/>
+									</label>
+									<label className="block text-sm font-medium text-gray-700">
+										Nazwisko:
+										<input
+											className="mt-1 w-full rounded border border-sky-500 p-2"
+											type="text"
+											name="nazwisko"
+											value={formData1.nazwisko}
+											onChange={handleInputChange}
+											required
+										/>
+									</label>
+									<label className="block text-sm font-medium text-gray-700">
+										E-mail:
+										<input
+											className="mt-1 w-full rounded border border-sky-500 p-2"
+											type="email"
+											name="email"
+											value={formData1.email}
+											onChange={handleInputChange}
+											required
+										/>
+									</label>
+									<div className="md:col-span-3">
+										<label className="block text-sm font-medium text-gray-700">
+											Twój pomysł:
+											<textarea
+												className="md:w-[calc(100% - 4rem)] mt-1 w-full rounded border border-sky-500 p-2"
+												name="pytanie"
+												value={formData1.pytanie}
+												required
+												onChange={handleInputChange2}
+												rows={5}
+											/>
+										</label>
+									</div>
+								</div>
+								<Button
+									type="submit"
+									className="hover:primary/90 mx-auto mt-4 min-w-[15ch] rounded-md bg-sky-700 px-4 py-2 text-white"
+								>
+									Aplikuj
+								</Button>
+							</form>
+						</div>
+					</div>
 				</div>
 			)}
 
