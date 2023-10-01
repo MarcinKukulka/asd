@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const ideas = [
 	{
@@ -57,7 +57,6 @@ const ideas = [
 			"Opracuj system automatyzacji domu, który umożliwia użytkownikom zdalne sterowanie urządzeniami elektronicznymi i poprawę efektywności energetycznej.",
 	},
 ];
-
 const Talents: React.FC = () => {
 	const [selectedTile, setSelectedTile] = useState<number | null>(null);
 
@@ -70,32 +69,55 @@ const Talents: React.FC = () => {
 		console.log("Aplikuj kliknięty!");
 	};
 
+	useEffect(() => {
+		const handleBodyClick = (event: MouseEvent) => {
+			const target = event.target as HTMLElement;
+
+			// Sprawdź czy kliknięto na element body lub jego dzieci
+			if (target.tagName.toLowerCase() === "body" || target.closest(".modal-container") === null) {
+				setSelectedTile(null);
+			}
+		};
+
+		// Dodaj event listener do body
+		document.body.addEventListener("click", handleBodyClick);
+
+		// Oczyść event listener po zniszczeniu komponentu
+		return () => {
+			document.body.removeEventListener("click", handleBodyClick);
+		};
+	}, []);
+
 	return (
 		<div className="bg-sky-blue flex flex-col items-center justify-between p-8">
 			<div className="mb-4 flex flex-col items-center justify-between">
-				<h1 className="text-3xl font-bold">Kuźnia Talentów</h1>
+				<h1 className="text-3xl font-bold">Stocznia startupów</h1>
 				<p className="text-xl font-semibold">Znajdź swoją szansę</p>
 			</div>
 
-			{selectedTile !== null ? (
-				<div className="mb-4 w-full max-w-6xl cursor-pointer">
-					<div className="rounded-lg bg-white p-8 text-center shadow-md shadow-sky-100 transition-all hover:bg-sky-100">
-						<h2 className="mb-4 text-3xl font-bold text-sky-900">{ideas[selectedTile].title}</h2>
-						<p className="mb-2 text-base font-semibold text-gray-600">
+			{selectedTile !== null && (
+				<div className="modal-container">
+					<div className="modal-content rounded-lg bg-white p-8 shadow-md">
+						<h2 className="mb-4 text-2xl font-bold text-sky-900">{ideas[selectedTile].title}</h2>
+						<p className="mb-4 text-base font-semibold text-gray-600">
 							{ideas[selectedTile].category}
 						</p>
 						<p className="mb-4 text-base text-gray-600">{ideas[selectedTile].description}</p>
 						<button
-							className="rounded bg-sky-900 px-6 py-3 text-white hover:bg-sky-700"
+							className="rounded bg-sky-900 px-4 py-2 text-white hover:bg-sky-700"
 							onClick={handleApplyClick}
 						>
 							Aplikuj
 						</button>
 					</div>
 				</div>
-			) : null}
+			)}
 
-			<div className="grid w-full max-w-4xl cursor-pointer grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			<div
+				className={`grid w-full max-w-4xl cursor-pointer grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ${
+					selectedTile !== null ? "hidden" : ""
+				}`}
+			>
 				{ideas.map((idea, index) => (
 					<div
 						key={index}
