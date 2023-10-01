@@ -20,7 +20,6 @@ export const ForumCard = ({
 				alt={iconAlt}
 				className="h-14 w-14 rounded-md bg-white p-2"
 			/>
-
 			<div>
 				<p className="font-bold">{title}</p>
 				<p className="mt-2 pr-8 text-sm">{description}</p>
