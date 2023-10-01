@@ -1,14 +1,17 @@
 export const VoteInput = ({
 	title,
+	description,
 	onChange,
 }: {
 	title: string;
+	description: string;
 	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
 	return (
 		<label
+		title={description}
 			htmlFor={title}
-			className="flex items-center gap-x-56 whitespace-nowrap rounded-md  border border-sky-500 p-3 px-3 checked:outline-none hover:bg-sky-100"
+			className="flex items-center justify-between cursor-pointer whitespace-nowrap rounded-md  border border-sky-500 p-3 text-sm px-3 checked:outline-none hover:bg-sky-100"
 		>
 			{title}
 			<input

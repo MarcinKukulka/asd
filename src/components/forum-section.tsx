@@ -6,43 +6,42 @@ import Handshake from "@/public/assets/icons/heart-handshake.svg";
 
 const FORUM_CARDS = [
 	{
-		title: "Card1",
-		description: "card description",
+		title: "Przyszłość sztucznej inteligencji",
+		description: "Odkryj najnowsze trendy w AI i machine learningu.",
 		icon: Handshake as StaticImageData,
 		iconAlt: "handshake icon",
 	},
 	{
-		title: "Card1",
-		description: "card description",
+		title: "Energia odnawialna i ekologia",
+		description: "Nowe technologie w produkcji energii zrównoważonej.",
 		icon: Handshake as StaticImageData,
-		iconAlt: "handshake icon",
+		iconAlt: "eco icon",
 	},
 	{
-		title: "Card1",
-		description: "card description",
+		title: "Blockchain i kryptowaluty",
+		description: "Rozważania nad przyszłością finansów i technologii blockchain.",
 		icon: Handshake as StaticImageData,
-		iconAlt: "handshake icon",
+		iconAlt: "link icon",
 	},
 	{
-		title: "Card1",
-		description: "card description",
+		title: "Internet rzeczy (IoT)",
+		description: "Najnowsze osiągnięcia w dziedzinie IoT i automatyzacji.",
 		icon: Handshake as StaticImageData,
-		iconAlt: "handshake icon",
+		iconAlt: "network icon",
 	},
 	{
-		title: "Card1",
-		description: "card description",
+		title: "Medycyna przyszłości",
+		description: "Nowe metody diagnostyki i leczenia w medycynie.",
 		icon: Handshake as StaticImageData,
-		iconAlt: "handshake icon",
+		iconAlt: "heart icon",
 	},
 	{
-		title: "Card1",
-		description: "card description",
+		title: "Autonomiczne pojazdy",
+		description: "Rozwój technologii prowadzących do samochodów autonomicznych.",
 		icon: Handshake as StaticImageData,
-		iconAlt: "handshake icon",
+		iconAlt: "car icon",
 	},
 ];
-
 export const ForumSection = () => {
 	return (
 		<section className="flex w-full justify-center bg-sky-100 pb-8">
@@ -51,7 +50,7 @@ export const ForumSection = () => {
 					<h2 className="self-center text-4xl font-bold">
 						Znajdź pomoc na naszym dedykowanym forum
 					</h2>
-					<div className="mx-auto grid md:grid-cols-3 grid-cols-2 gap-8">
+					<div className="mx-auto grid grid-cols-2 gap-8 md:grid-cols-3">
 						{FORUM_CARDS.map(({ title, description, iconAlt, icon }) => (
 							<ForumCard
 								title={title}

@@ -6,12 +6,42 @@ import { Button } from "./ui/button";
 import { Chart } from "./ui/donut-chart";
 
 const PROJECTS = [
-	{ id: 1, title: "Projekt 1" },
-	{ id: 2, title: "Projekt 2" },
-	{ id: 3, title: "Projekt 3" },
-	{ id: 4, title: "Projekt 4" },
-	{ id: 5, title: "Projekt 5" },
-	{ id: 6, title: "Projekt 6" },
+	{
+		id: 1,
+		title: "EkoDron: Monitorowanie Ekologii",
+		description:
+			"Projekt EkoDron wykorzystuje drony i sztuczną inteligencję do monitorowania i ochrony środowiska naturalnego.",
+	},
+	{
+		id: 2,
+		title: "MedTech 2.0: Opieka Zdrowotna Przyszłości",
+		description:
+			"MedTech 2.0 to projekt, który zmienia dostarczanie opieki zdrowotnej, wykorzystując zaawansowane technologie i analizę danych.",
+	},
+	{
+		id: 3,
+		title: "AquaFarm: Produkcja Żywności Morskiej",
+		description:
+			"Projekt AquaFarm skupia się na zrównoważonej produkcji żywności morskiej z wykorzystaniem nowoczesnych technologii hodowli.",
+	},
+	{
+		id: 4,
+		title: "GreenTech+: Ekologiczna Energetyka",
+		description:
+			"Projekt GreenTech+ rozwija ekologiczne technologie energetyczne w celu zmniejszenia emisji CO2.",
+	},
+	{
+		id: 5,
+		title: "EduAI: Nauczanie Maszynowe dla Wszystkich",
+		description:
+			"Projekt EduAI bada nowe metody nauczania maszynowego i sztucznej inteligencji, aby uczynić je bardziej dostępnymi.",
+	},
+	{
+		id: 6,
+		title: "SmartCity 2030: Transformacja Infrastruktur",
+		description:
+			"SmartCity 2030 wykorzystuje IoT i analizę danych do transformacji miejskich infrastruktur i poprawy jakości życia mieszkańców.",
+	},
 ];
 
 export const VoteSection = () => {
@@ -42,8 +72,8 @@ export const VoteSection = () => {
 			{!isButtonClicked ? (
 				<form className="flex flex-col items-center" onSubmit={handleVoting}>
 					<div className="gird-cols-1 grid gap-6 md:grid-cols-2">
-						{PROJECTS.map(({ id, title }) => (
-							<VoteInput key={id} title={title} onChange={handleInputChange} />
+						{PROJECTS.map(({ id, title, description }) => (
+							<VoteInput key={id} title={title} onChange={handleInputChange} description={description} />
 						))}
 					</div>
 
