@@ -23,7 +23,7 @@ export const Navbar = () => {
 	const navbarPaths = [
 		{ title: "Home", path: "/" },
 		{ title: "Kursy", path: "http://192.166.217.253" },
-		{ title: "Forum", path: "http://192.166.217.253:8000" },
+		{ title: "Forum", path: "http://192.166.217.253:8000/community/" },
 		{ title: "Kontakt", path: "/kontakt" },
 		{ title: "Stocznia startupów", path: "/stocznia-startupow" },
 	];
