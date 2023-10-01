@@ -25,7 +25,7 @@ export const Navbar = () => {
 		{ title: "Kursy", path: "http://192.166.217.253" },
 		{ title: "Forum", path: "http://192.166.217.253:8000" },
 		{ title: "Kontakt", path: "/kontakt" },
-		{ title: "O nas", path: "/o-nas" },
+		{ title: "Stocznia startupów", path: "/stocznia-startupow" },
 	];
 
 	return (
