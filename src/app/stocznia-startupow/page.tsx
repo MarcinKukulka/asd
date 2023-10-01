@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { Button } from "@/ui/button";
 
 const ideas = [
 	{
@@ -97,18 +98,18 @@ const Talents: React.FC = () => {
 
 			{selectedTile !== null && (
 				<div className="modal-container">
-					<div className="modal-content rounded-lg bg-white p-8 shadow-md">
+					<div className="modal-content flex flex-col rounded-lg bg-white p-8 shadow-md">
 						<h2 className="mb-4 text-2xl font-bold text-sky-900">{ideas[selectedTile].title}</h2>
 						<p className="mb-4 text-base font-semibold text-gray-600">
 							{ideas[selectedTile].category}
 						</p>
 						<p className="mb-4 text-base text-gray-600">{ideas[selectedTile].description}</p>
-						<button
-							className="rounded bg-sky-900 px-4 py-2 text-white hover:bg-sky-700"
+						<Button
+							className="hover:primary/90 self-center rounded bg-sky-700 px-4 py-2 text-white"
 							onClick={handleApplyClick}
 						>
 							Aplikuj
-						</button>
+						</Button>
 					</div>
 				</div>
 			)}
