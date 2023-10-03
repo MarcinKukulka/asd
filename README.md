@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# HackYeah Hackathon Project - Future Campus in Kołobrzeg City 🚀
 
-## Getting Started
+🏆 This project was developed during the HackYeah Hackathon, where innovation and creativity met to shape the Future Campus in Kołobrzeg City! 🌆
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🚀 We leveraged cutting-edge technologies to bring this vision to life:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js:** Our choice for building a fast, dynamic, and highly optimized web application.
+- **Tailwind CSS:** Styling made easy with a utility-first CSS framework, allowing us to create stunning designs effortlessly.
+- **shadcn/ui:** We integrated shadcn/ui for seamless user interface components that added a touch of magic to our project.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## About the Project
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The "Future Campus in Kołobrzeg City" project is all about reimagining the future of education and urban development. We aimed to create an interactive platform that showcases innovative ideas for the Kołobrzeg City Campus of Tomorrow.
 
-## Learn More
+🌟 **Key Features:**
+- Explore futuristic campus designs.
+- Learn about sustainable urban planning.
+- Engage with cutting-edge educational technologies.
+- Connect with like-minded enthusiasts.
 
-To learn more about Next.js, take a look at the following resources:
+👩‍🎓👨‍🔬 Join us on this exciting journey as we pave the way for a brighter and smarter future!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#️⃣ **Stay Tuned!** Follow our progress and be part of the change. Together, we can shape the Future Campus of Kołobrzeg City! 🌟🏙️✨
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[Visit Our Project](https://hack-yeah23.vercel.app/)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
