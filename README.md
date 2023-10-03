@@ -1,6 +1,6 @@
 # HackYeah Hackathon Project - Future Campus in Kołobrzeg City 🚀
 
-🏆 This project was developed during the HackYeah Hackathon, where innovation and creativity met to shape the Future Campus in Kołobrzeg City! 🌆
+🏆 This project was developed during the HackYeah 2023 Hackathon, where innovation and creativity met to shape the Future Campus in Kołobrzeg City! 🌆
 
 ## Technologies Used
 
